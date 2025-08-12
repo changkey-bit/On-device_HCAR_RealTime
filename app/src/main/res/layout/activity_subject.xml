@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 이미지 -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 중앙 수평 Guideline -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- 상단 그룹: 피험자 설정 (TextView와 EditText는 같은 baseline으로 배치) -->
+    <TextView
+        android:id="@+id/text_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject ID:"
+        android:textSize="18sp"
+        android:fontFamily="@font/notosanskr_semibold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/guideline_center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/edit_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="1"
+        android:fontFamily="@font/notosanskr_semibold"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@null"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_activity"
+        app:layout_constraintStart_toEndOf="@id/text_activity"
+        android:layout_marginStart="10dp" />
+
+    <!-- 하단 그룹: 지속시간 설정 (TextView와 EditText는 같은 baseline으로 배치) -->
+    <TextView
+        android:id="@+id/text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration(Hour):"
+        android:textSize="18sp"
+        android:fontFamily="@font/notosanskr_semibold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/guideline_center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:id="@+id/edit_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:fontFamily="@font/notosanskr_semibold"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@null"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_duration"
+        app:layout_constraintStart_toEndOf="@id/text_duration"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_button_yes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
