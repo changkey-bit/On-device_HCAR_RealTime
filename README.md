@@ -4,7 +4,7 @@
 
 ## ⏱️ Framework of On-device_HCAR 
 
-<img src="[https://github.com/user-attachments/assets/d79c0bf6-ab4c-4f2f-93e1-b0fcbbde8d37](https://github.com/user-attachments/assets/b13bcb1b-f096-4cbd-9853-ed8028732595)">
+<img src="https://github.com/user-attachments/assets/b13bcb1b-f096-4cbd-9853-ed8028732595">
 
 ## ⏱️ 스마트워치 기반 실시간 위생 및 청결 행동 인식 시스템
 
